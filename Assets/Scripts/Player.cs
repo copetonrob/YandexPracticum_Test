@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float _speed = 5f;
     [SerializeField] GameObject _deathEffect;
+    [SerializeField] float _upForce = 1f;
 
     Rigidbody2D _rigidbody;
     GameController _gameController;
@@ -35,7 +36,7 @@ public class Player : MonoBehaviour
         //Physics Update
         if (isUp)
         {
-            _rigidbody.AddForce(Vector2.up, ForceMode2D.Impulse);
+            _rigidbody.AddForce(Vector2.up * _upForce, ForceMode2D.Impulse);
         }
         Vector3 currentVelocity = _rigidbody.velocity;
         currentVelocity.x = _speed;

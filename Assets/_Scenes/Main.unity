@@ -1060,7 +1060,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1089,6 +1089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _deathEffect: {fileID: 5368955602845181811, guid: efec180ba34e5a0439a6678d756443ec, type: 3}
+  _upForce: 1
 --- !u!58 &1157334175
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1226,7 +1227,7 @@ TrailRenderer:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
+        value: 0.05126953
         inSlope: 0
         outSlope: 0
         tangentMode: 0
