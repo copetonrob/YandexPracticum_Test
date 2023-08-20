@@ -22,7 +22,6 @@ public class GameController : MonoBehaviour
     [SerializeField] Coin _coinPrefab;
     [SerializeField] TextMeshProUGUI _coinText;
 
-    bool isGameStart = false;
     int _coins = 0;
     Player _player;
 
@@ -34,7 +33,6 @@ public class GameController : MonoBehaviour
 
     public void StartGame()
     {
-        isGameStart = true;
         StartCoroutine(ObstaclesSpawner());
         StartCoroutine(CoinSpawner());
         _player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;

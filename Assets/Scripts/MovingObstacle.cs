@@ -22,6 +22,10 @@ public class MovingObstacle : Obstacle
         transform.position = new Vector3(transform.position.x, Random.Range(_minPosY, _maxPosY), transform.position.z);
         isUp = Random.Range(0, 2) == 0;
     }
+    private void Start()
+    {
+        Destroy(this.gameObject, 10f);
+    }
 
     private void Update()
     {

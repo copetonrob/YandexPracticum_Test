@@ -12,6 +12,7 @@ public class Coin : MonoBehaviour
     private void Start()
     {
         _player = FindObjectOfType<Player>();
+        Destroy(this.gameObject, 10f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
